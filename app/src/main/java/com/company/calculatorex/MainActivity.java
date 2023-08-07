@@ -180,9 +180,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                history = textViewHistory.getText().toString();
-                currentResult=textViewResult.getText().toString();
-                textViewHistory.setText(history+currentResult);
+
+                if(!btnEqualControl)
+                {
+                    history = textViewHistory.getText().toString();
+                    currentResult=textViewResult.getText().toString();
+                    textViewHistory.setText(history+currentResult);
+                }
+
 
                 if(oparator)
                 {
@@ -242,9 +247,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                history = textViewHistory.getText().toString();
-                currentResult=textViewResult.getText().toString();
-                textViewHistory.setText(history+currentResult+"+");
+                if(btnEqualControl)
+                {
+                    history = textViewHistory.getText().toString();
+                   // currentResult=textViewResult.getText().toString();
+                    textViewHistory.setText(history+"+");
+                }
+                else
+                {
+                    history = textViewHistory.getText().toString();
+                    currentResult=textViewResult.getText().toString();
+                    textViewHistory.setText(history+currentResult+"+");
+                }
                 if(oparator)
                 {
                     if(status=="multiplication")
@@ -276,9 +290,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                history = textViewHistory.getText().toString();
-                currentResult=textViewResult.getText().toString();
-                textViewHistory.setText(history+currentResult+"-");
+                if(btnEqualControl)
+                {
+                    history = textViewHistory.getText().toString();
+                    // currentResult=textViewResult.getText().toString();
+                    textViewHistory.setText(history+"-");
+                }
+                else
+                {
+                    history = textViewHistory.getText().toString();
+                    currentResult=textViewResult.getText().toString();
+                    textViewHistory.setText(history+currentResult+"-");
+                }
                 if(oparator)
                 {
                     if(status=="multiplication")
@@ -313,9 +336,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                history = textViewHistory.getText().toString();
-                currentResult=textViewResult.getText().toString();
-                textViewHistory.setText(history+currentResult+"*");
+                if(btnEqualControl)
+                {
+                    history = textViewHistory.getText().toString();
+                    // currentResult=textViewResult.getText().toString();
+                    textViewHistory.setText(history+"*");
+                }
+                else
+                {
+                    history = textViewHistory.getText().toString();
+                    currentResult=textViewResult.getText().toString();
+                    textViewHistory.setText(history+currentResult+"*");
+                }
 
                 if(oparator)
                 {
@@ -348,9 +380,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                history = textViewHistory.getText().toString();
-                currentResult=textViewResult.getText().toString();
-                textViewHistory.setText(history+currentResult+"/");
+                if(btnEqualControl)
+                {
+                    history = textViewHistory.getText().toString();
+                    // currentResult=textViewResult.getText().toString();
+                    textViewHistory.setText(history+"/");
+                }
+                else
+                {
+                    history = textViewHistory.getText().toString();
+                    currentResult=textViewResult.getText().toString();
+                    textViewHistory.setText(history+currentResult+"/");
+                }
                 if(oparator)
                 {
                     if(status=="sum")
